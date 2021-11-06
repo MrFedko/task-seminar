@@ -28,27 +28,6 @@ else
     Console.WriteLine($"Этот день недели на английском будет называться {DayName(day)}");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Console.WriteLine("Введите номер дня недели: ");
 // int num = Convert.ToInt16 (Console.ReadLine());
 
