@@ -6,13 +6,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите натуральное число от 1 до 100: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if ((num < 100) || (num > 1000))
-{
-    Console.WriteLine("Это число не из заданного отрезка.");
-    return;
-}
-
-if ((num2 < 1) || (num2 > 99))
+if ((num < 100) || (num > 1000) || (num2 < 1) || (num2 > 99))
 {
     Console.WriteLine("Это число не из заданного отрезка.");
     return;
