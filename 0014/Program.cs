@@ -13,16 +13,11 @@ if (num < 100 && num > -100)
     Console.WriteLine("У этого числа нет третьей цифры.");
     return;
 }
-
-string ourNum = Convert.ToString(num);
-
 string search3(string text)
 {
     string result = String.Empty;
-
     result = result + text[2];
     Console.WriteLine($"Третьей цифрой этого числа является {result}");
-
     return result;
 }
-search3(ourNum);
+search3(Convert.ToString(num));
