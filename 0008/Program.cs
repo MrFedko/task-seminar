@@ -9,14 +9,24 @@ if (num <= 0)
 }
 Console.WriteLine();
 
-void PrintEventNum(int n)
+for (int i = 1; i <= num; i++)
 {
-    for (int i = 1; i <= n; i++)
+    if (i % 2 == 0)
     {
-        if (i % 2 == 0)
-        {
-            Console.WriteLine($"{i}");
-        }
+        Console.WriteLine($"{i}");
     }
 }
-PrintEventNum(num);
+
+
+
+// void PrintEventNum(int n)
+// {
+//     for (int i = 1; i <= n; i++)
+//     {
+//         if (i % 2 == 0)
+//         {
+//             Console.WriteLine($"{i}");
+//         }
+//     }
+// }
+// PrintEventNum(num);
