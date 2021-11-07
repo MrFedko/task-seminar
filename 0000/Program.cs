@@ -1,14 +1,9 @@
-﻿Console.WriteLine("Введите число, квадрат которого необходимо найти: ");
+﻿Console.WriteLine("Введите число, степень которого необходимо найти: ");
 int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите степнь в которую необходимо возвести число: ");
+int degree = Convert.ToInt32(Console.ReadLine());
 
-int qwerty = 89;
-int SquareNumber(int num)
-{
-    int n = num * num;
-    return n;
-}
-
-Console.WriteLine($"Квадрат {number} = {SquareNumber(number)}");
+Console.WriteLine($"{number}^{degree} = {Math.Pow(number, degree)}");
 
 
 
