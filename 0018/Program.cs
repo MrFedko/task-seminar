@@ -4,11 +4,12 @@
 
 bool TrueFalse (int x, int y)
 {
-    bool FlagX, FlagY;
-    if (x == 0) FlagX = false;
-    else FlagX = true;
-    if (y == 0) FlagY = false;
-    else FlagY = true;
+    bool FlagX = (x != 0), FlagY = (y != 0);
+    // if (x == 0) FlagX = false;
+    // else FlagX = true;
+
+    // if (y == 0) FlagY = false;
+    // else FlagY = true;
 
     bool left = !(FlagX || FlagY);
     bool right = !(FlagX) && !(FlagY);
