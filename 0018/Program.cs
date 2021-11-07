@@ -4,8 +4,16 @@
 
 bool TrueFalse (int x, int y)
 {
-    int left = -1 * (x + y);
-    int right = -1 *x * (-1 * y);
+    bool FlagX, FlagY;
+    if (x == 0) FlagX = false;
+    else FlagX = true;
+    if (y == 0) FlagY = false;
+    else FlagY = true;
+
+    bool left = !(FlagX || FlagY);
+    bool right = !(FlagX) && !(FlagY);
+    // int left = -1 * (x + y);
+    // int right = -1 *x * (-1 * y);
     return(left == right);
 }
 
