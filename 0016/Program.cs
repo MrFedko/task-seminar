@@ -3,19 +3,10 @@
 Console.WriteLine("Введите номер дня недели: ");
 int day = Convert.ToInt32(Console.ReadLine());
 
-
-
 string DayName (int number)
 {
-    string result = string.Empty;
-    if(number == 1) result = result + "Monday";
-    if(number == 2) result = result + "Tuesday";
-    if(number == 3) result = result + "Wednesday";
-    if(number == 4) result = result + "Thursday";
-    if(number == 5) result = result + "Friday";
-    if(number == 6) result = result + "Saturday";
-    if(number == 7) result = result + "Sunday";
-    return result;
+    string[] dayweek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+    return dayweek[number -1]; 
 }
 
 if (day < 1 || day > 7)
