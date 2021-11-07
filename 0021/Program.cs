@@ -9,10 +9,7 @@ if (number < 10000 || number > 99999)
     return;
 }
 
-int n1 = number % 100;
-int n2 = number % 10000 / 1000 * 10 + number / 10000;
-
-if (n1 == n2) Console.WriteLine($"Число {number} является полиндромом.");
+if (((number / 1000 % 10) == (number / 10 % 10)) && ((number / 10000) == number % 10)) Console.WriteLine($"Число {number} является полиндромом.");
 else
 {
     Console.WriteLine($"Число {number} не является полиндромом.");
