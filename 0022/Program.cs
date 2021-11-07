@@ -12,9 +12,6 @@ int BX = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите координату Y для точки B: ");
 int BY = Convert.ToInt16(Console.ReadLine());
 
-int lengthA = AX - BX;
-int lengthB = AY - BY;
-
-double distanceAB = Math.Sqrt((Math.Pow(lengthA, 2) + Math.Pow(lengthB, 2)));
+double distanceAB = Math.Sqrt((Math.Pow((AX - BX), 2) + Math.Pow((AY - BY), 2)));
 
 Console.WriteLine($"Расстояние между точками A и B равно {distanceAB}");
