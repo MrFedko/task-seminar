@@ -10,18 +10,13 @@ bool square(long number1, long number2)
     return number1 / number2 == number2;
 }
 
-bool square1(long n1, long n2)
-{
-    return n1 / n2 == n2;
-}
-
 if(square(n1, n2) == true)
 {
     Console.WriteLine($"Число {n1} является квадратом числа {n2}");
 }
 else 
 {
-    if (square1(n2, n1) == true)
+    if (square(n2, n1) == true)
     {
         Console.WriteLine($"Число {n2} является квадратом числа {n1}");
         return;
