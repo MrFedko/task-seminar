@@ -25,7 +25,8 @@ int FractionalDigitCount(double n)          //находим число знак
 int length = howLong(number);                    // получаем длинну числа
 int fractional = FractionalDigitCount(number);   //получаем количество знаков после запятой   
 
-Console.WriteLine($" длинна числа = {length}, количество знаков после запятой = {fractional}");
+Console.WriteLine($" длинна числа = {length + fractional}");
+
 int summ(double n, int l, int f)                       //вводим число, его длинну, количество знаков после запятой
 {
     int result = 0;
