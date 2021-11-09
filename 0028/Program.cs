@@ -27,11 +27,11 @@ int fractional = FractionalDigitCount(number);   //получаем количе
 
 Console.WriteLine($" длинна числа = {length + fractional}");
 
-int summ(double n, int l, int f)                       //вводим число, его длинну до и после запятой
+double summ(double n, int l, int f)                       //вводим число, его длинну до и после запятой
 {
-    int result = 0;
+    double result = 0;
     double divider = 1;
-    double temp = 0;
+
     if (f > 0)
     {
         for (int i = 0; i < f; i++)
@@ -41,10 +41,12 @@ int summ(double n, int l, int f)                       //вводим число
             divider = temp1;
         }
     }
-    for (int j = 0; j < (f + l); j++)
+    int len = f + l;
+    for (int j = 0; j < len; j++)
     {
-        temp = (n / divider) % 10;
-        result = Convert.ToInt16(result + temp);
+        double div = n / divider;
+        int temp = Convert.ToInt16(Math.Floor(Math.Abs(div))) % 10;
+        result = result + temp;
         divider *= 10;
     }
     return Math.Abs(result);
