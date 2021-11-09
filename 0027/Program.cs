@@ -1,21 +1,22 @@
 ﻿// определить количество цифр в числе
 
 Console.WriteLine("Введите число: ");
-double n = Convert.ToDouble(Console.ReadLine()); //делаем double а не стразу strring, чтобы не ввели слово вместо числа
-string number = Convert.ToString(n);
+double n = Convert.ToDouble(Console.ReadLine());
 
-
-int counter(string howLong)
+int howLong(double n)               
 {
-    int result = 0;
-    for (int i = 0; i < howLong.Length; i++)
+    n = Math.Abs(n);
+    double temp = n;
+    int count;
+    for (count = 1; (temp /= 10) >= 1; count++);
+    int count1;
+    for (count1 = 0; n % 1 != 0; count1++)
     {
-        if (howLong[i] == '-' || howLong[i] == '.' || howLong[i] == ',')
-        {
-            i++;
-        }
-        result++;
+        n *= 10;
     }
+    int result = count + count1;
     return result;
 }
-Console.WriteLine($"В числе {n} вот столько цифр: {counter(number)}");
+
+
+Console.WriteLine($"В числе {n} вот столько цифр: {howLong(n)}");
