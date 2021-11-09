@@ -1,16 +1,11 @@
 ﻿// Выяснить кратно ли число заданному. Если нет, вывести остаток.
 
-Console.WriteLine("Введите натуральное число от 100 до 1000: ");
+Console.WriteLine("Введите натуральное число A: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите натуральное число от 1 до 100: ");
+Console.WriteLine("Введите натуральное число B: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if ((num < 100) || (num > 1000) || (num2 < 1) || (num2 > 99))
-{
-    Console.WriteLine("Это число не из заданного отрезка.");
-    return;
-}
 
 int remainder(int number, int number1)
 {
