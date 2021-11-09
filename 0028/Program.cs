@@ -44,7 +44,7 @@ int summ(double n, int l, int f)                       //вводим число
     {
         temp = (n / divider) % 10;
         result = Convert.ToInt16(result + temp);
-        divider = divider * 10;
+        divider *= 10;
     }
     return Math.Abs(result);
 }
