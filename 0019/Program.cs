@@ -4,9 +4,9 @@ int Quater(int x, int y)
 {
     int quaterPos = 0;
     if (x > 0 && y > 0) quaterPos = 1;
-    if (x > 0 && y < 0) quaterPos = 2;
+    if (x < 0 && y > 0) quaterPos = 2;
     if (x < 0 && y < 0) quaterPos = 3;
-    if (x < 0 && y > 0) quaterPos = 4;
+    if (x > 0 && y < 0) quaterPos = 4;
     return quaterPos;
 }
 
