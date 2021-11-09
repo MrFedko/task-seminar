@@ -1,9 +1,9 @@
 ﻿// Выяснить кратно ли число заданному. Если нет, вывести остаток.
 
-Console.WriteLine("Введите натуральное число A: ");
+Console.WriteLine("Введите число A: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите натуральное число B: ");
+Console.WriteLine("Введите число B: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
 
