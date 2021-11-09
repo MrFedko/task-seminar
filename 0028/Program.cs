@@ -3,7 +3,7 @@
 Console.WriteLine("Введите число: ");
 double number = Convert.ToDouble(Console.ReadLine());
 
-int howLong(double n)               //необходимо понять насколько длинное число
+int howLong(double n)               //необходимо понять насколько длинное число до запятой
 {
     n = Math.Abs(n);
     int count;
@@ -22,12 +22,12 @@ int FractionalDigitCount(double n)          //находим число знак
     }
     return count;
 }
-int length = howLong(number);                    // получаем длинну числа
+int length = howLong(number);                    // получаем длинну числа до запятой
 int fractional = FractionalDigitCount(number);   //получаем количество знаков после запятой   
 
 Console.WriteLine($" длинна числа = {length + fractional}");
 
-int summ(double n, int l, int f)                       //вводим число, его длинну, количество знаков после запятой
+int summ(double n, int l, int f)                       //вводим число, его длинну до и после запятой
 {
     int result = 0;
     double divider = 1;
