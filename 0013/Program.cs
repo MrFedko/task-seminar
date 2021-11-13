@@ -9,12 +9,10 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 
 int remainder(int number, int number1)
 {
-    int result = 0;
-    result = number % number1;
-    return result;
+    return number % number1;
 }
 
-if (num % num2 == 0)
+if (remainder(num, num2) == 0)
 { 
     Console.WriteLine($"Число {num} делится на {num2} без остатка");
 }
