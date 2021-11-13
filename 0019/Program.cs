@@ -12,14 +12,10 @@ int Quater(int x, int y)
 
 Console.WriteLine("Введите координату X, не равную 0: ");
 int coorX = Convert.ToInt16(Console.ReadLine());
-if (coorX == 0)
-{
-    Console.WriteLine("НЕ РАВНУЮ НУЛЮ!!!!");
-    return;
-}
+
 Console.WriteLine("Введите координату Y, не равную 0: ");
 int coorY = Convert.ToInt16(Console.ReadLine());
-if (coorY == 0)
+if (coorY == 0 || coorX == 0)
 {
     Console.WriteLine("НЕ РАВНУЮ НУЛЮ!!!!");
     return;
