@@ -1,7 +1,7 @@
 ﻿// показать числа от -N до N
-Console.WriteLine("Введите число N: ");
+Console.WriteLine("Введите натуральное число N: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if(num <= 0) 
+if (num <= 0)
 {
     Console.WriteLine("Введите натуральное число.");
     return;
@@ -21,13 +21,8 @@ void WriteArray(int[] array, int start)
     }
 }
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.WriteLine($"{array[i]}");
-    }
-}
-
 WriteArray(myArray, numMin);
-PrintArray(myArray);
+for (int j = 0; j < myArray.Length; j++)
+{
+    Console.WriteLine($"{myArray[j]}");
+}
