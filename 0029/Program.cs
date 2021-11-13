@@ -1,7 +1,7 @@
 ﻿// Написать программу вычисления произведения чисел от 1 до N
 
 Console.WriteLine("Введите натуральное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+double number = Convert.ToInt32(Console.ReadLine());
 
 if (number < 1)
 {
@@ -9,9 +9,10 @@ if (number < 1)
     return;
 }
 
-int summ = 1;
-for (int i = 1; i <= number; i++)
+double Factorial(double n)
 {
-    summ = summ * i;
+    if (n == 1) return 1;
+ 
+    return n * Factorial(n - 1);
 }
-Console.WriteLine($"Произведение чисел от 1 до {number} = {summ}");
+Console.WriteLine($"Произведение чисел от 1 до {number} = {Factorial(number)}");
