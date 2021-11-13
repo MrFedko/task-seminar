@@ -9,15 +9,9 @@ if ((num < 100) || (num > 999))
     Console.WriteLine("это не трехзначное натуральное число.");
     return;
 }
-string lastNum = Convert.ToString(num);
-
-string NewNumber(string number)
+int secondDelete(int n)
 {
-    string result = String.Empty;
-    result = result + number[0] + number[2];
-    return result;
+    return n/100*10+n%10;
 }
 
-int num2 = Convert.ToInt16(NewNumber(lastNum));
-
-Console.WriteLine($"Получилось число {num2}");
+Console.WriteLine($"Получилось число {secondDelete(num)}");
