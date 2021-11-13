@@ -8,24 +8,16 @@ if ((num > 99) || (num < 9))
     Console.WriteLine("Это число не принадлежит к данному отрезку");
     return;
 }
-
-string ourNum = Convert.ToString(num);
-
-string numPosition(string number, int position)
+int max(int n)
 {
-    string result = String.Empty;
-    result = result + number[position];
+    int result = 0;
+    if (n % 10 > (n % 100) / 10) result = n % 10;
+    if (n % 10 < (n % 100) / 10) result = (n % 100) / 10;
     return result;
 }
 
-int FN = Convert.ToInt16(numPosition(ourNum, 0));
-int SN = Convert.ToInt16(numPosition(ourNum, 1));
-
-if(FN > SN)
+if (max(num) == 0) Console.WriteLine($"Цифры числа {num} равны");
+else 
 {
-    Console.WriteLine($"Наибольшей цифрой является {FN}");
-}
-else
-{
-    Console.WriteLine($"Наибольшей цифрой является {SN}");
+    Console.WriteLine($"Наибольшей цифрой является {max(num)}");
 }
