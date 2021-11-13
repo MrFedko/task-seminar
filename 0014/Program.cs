@@ -2,22 +2,15 @@
 Console.WriteLine("Введите натуральное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num < 1)
+int third( int n)
 {
-    Console.WriteLine("Это число не натуральное.");
-    return;
+    return (n/100)%10;
 }
-
-if (num < 100 && num > -100)
+if (num/100 == 0)
+{ 
+    Console.WriteLine($"У числа {num} нет третьей цифры");
+}
+else
 {
-    Console.WriteLine("У этого числа нет третьей цифры.");
-    return;
+    Console.WriteLine($"Треттья цифра числа {num} = {third(num)}");
 }
-string search3(string text)
-{
-    string result = String.Empty;
-    result = result + text[2];
-    Console.WriteLine($"Третьей цифрой этого числа является {result}");
-    return result;
-}
-search3(Convert.ToString(num));
