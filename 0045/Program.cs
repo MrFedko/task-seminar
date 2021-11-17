@@ -1,7 +1,12 @@
 ﻿// Показать числа Фибоначчи
 
-double[] array = new double[50];
+int length = 50;
+double[] array = new double[length];
 array[0] = 0;
 array[1] = 1;
-for (int i = 2; i < array.Length; i++) array[i] = array[i - 1] + array[i - 2];
+void FA(double[] a)
+{
+    for (int i = 2; i < a.Length; i++) a[i] = a[i - 1] + a[i - 2];
+}
+FA(array);
 for (int j = 0; j < array.Length; j++) Console.WriteLine(array[j]);
