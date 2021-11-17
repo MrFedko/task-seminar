@@ -1,15 +1,17 @@
 ﻿// Определить сколько чисел больше 0 введено с клавиатуры
 int length = 6;
-int [] array = new int [length];
-for ( int i = 0; i < array.Length; i++)
-{
-    Console.WriteLine($"Введите елмент массива A{i}: ");
-    array[i] = Convert.ToInt32(Console.ReadLine());
-}
-int count = 0;
+int[] array = new int[length];
 
-for(int j =0; j <array.Length; j++)
+int counter(int[] a)
 {
-    if (array[j] > 0) count++;
+    int c = 0;
+    for (int i = 0; i < a.Length; i++)
+    {
+        Console.WriteLine($"Введите элемент массива A{i}: ");
+        a[i] = Convert.ToInt32(Console.ReadLine());
+        if (a[i] > 0) c++;
+    }
+    return c;
 }
-Console.WriteLine($"В массиве {count} чисел больше 0");
+
+Console.WriteLine($"В массиве {counter(array)} чисел больше 0");
