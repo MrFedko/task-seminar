@@ -26,5 +26,4 @@ double difference(double[] a)
     return diff;
 
 }
-
 Console.WriteLine($"Разница между максимальным и минмальным значением массива равна {difference(array):f3}");
