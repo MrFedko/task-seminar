@@ -50,9 +50,9 @@ void scaling(double n, double[,] array)             //переписываем �
 {
     for (int i = 0; i < array.GetLength(0) - 1; i++)
     {
-        array[i, 0] =  (n/2) * array[i, 0] - array[array.GetLength(0) - 1, 0];
-        array[i, 1] = (n/2) * array[i, 1] - array[array.GetLength(0) - 1, 1];
-        array[i, 2] = (n/2) * array[i, 2];
+        array[i, 0] =  n * array[i, 0] - array[array.GetLength(0) - 1, 0];
+        array[i, 1] = n * array[i, 1] - array[array.GetLength(0) - 1, 1];
+        array[i, 2] = n * array[i, 2];
     }
 }
  void PrintB(double[,] array)       // пишем метод для печати координат
@@ -64,7 +64,7 @@ void scaling(double n, double[,] array)             //переписываем �
      }
  }   
 
-double scale = 3; //т.к. мы масштабируем от середины фигуры, расстояние до точек масшабируется с коэфициентом scale/2
+double scale = 2; 
 
 distance(octagon);
 PrintA(octagon);
