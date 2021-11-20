@@ -2,14 +2,13 @@
 
 int[,] array2d = new int[3, 2];
 
-Console.WriteLine("Введите b1 для первой прямой: ");
-array2d[0, 0] = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите k1 для первой прямой: ");
-array2d[0, 1] = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите b2 для второй прямой: ");
-array2d[1, 0] = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите k2 для второй прямой: ");
-array2d[1, 1] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b1, k1, b2, k2 через пробел: ");
+string numbers = Console.ReadLine();
+string[] num = numbers.Split(' ');
+array2d[0, 0] = Convert.ToInt32(num[0]);
+array2d[0, 1] = Convert.ToInt32(num[1]);
+array2d[1, 0] = Convert.ToInt32(num[2]);
+array2d[1, 1] = Convert.ToInt32(num[3]);
 
 if (array2d[0, 1] == array2d[1, 1])
 {
