@@ -1,18 +1,18 @@
 ﻿// Выяснить являются ли три числа сторонами треугольника 
 
-Console.WriteLine("Введите натуральное число A: ");
-int A = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите натуральное число B: ");
-int B = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите натуральное число C: ");
-int C = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Введите три натуральных числа через пробел: ");
+string numbers = Console.ReadLine();
+string[] num = numbers.Split(' ');
 
-bool triangle ( int q, int w, int e)
+bool triangle(string[] a)
 {
+    int q = Convert.ToInt32(a[0]);
+    int w = Convert.ToInt32(a[1]);
+    int e = Convert.ToInt32(a[2]);
     return (q < (w + e)) && (w < (q + e)) && (e < (q + w));
 }
-if (triangle(A, B, C) == true) Console.WriteLine($"Числа A = {A}, B = {B}, C = {C} являются сторонами треугольника");
-else 
-{ 
-    Console.WriteLine($"Числа A = {A}, B = {B}, C = {C} НЕ являются сторонами треугольника");
+if (triangle(num) == true) Console.WriteLine($"Числа являются сторонами треугольника");
+else
+{
+    Console.WriteLine($"Числа НЕ являются сторонами треугольника");
 }
