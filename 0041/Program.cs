@@ -11,7 +11,7 @@ bool triangle(string[] a)
     int e = Convert.ToInt32(a[2]);
     return (q < (w + e)) && (w < (q + e)) && (e < (q + w));
 }
-if (triangle(num) == true) Console.WriteLine($"Числа являются сторонами треугольника");
+if (triangle(num)) Console.WriteLine($"Числа являются сторонами треугольника");
 else
 {
     Console.WriteLine($"Числа НЕ являются сторонами треугольника");
