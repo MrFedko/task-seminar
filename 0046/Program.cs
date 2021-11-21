@@ -44,8 +44,8 @@ void PrintA(double[,] array)       //для проверки выводим ра
     }
 }
 
-//x новой точки = 0,5 * scale * x старая точка−x0
-//y новая точка = 0,5 * scale * y старая точка - y0
+//x новой точки = scale * x старая точка−x0
+//y новая точка = scale * y старая точка - y0
 void scaling(double n, double[,] array)             //переписываем масштабированный массив
 {
     for (int i = 0; i < array.GetLength(0) - 1; i++)
