@@ -163,6 +163,7 @@ while (HowMuchAll(PlayerCard) < 21)
     }
 }
 if (HowMuchAll(DealerCard) > 21) Console.WriteLine("Ты  выйграл!!!");
+if (HowMuchAll(PlayerCard) == 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты прогирал....");
 if (HowMuchAll(PlayerCard) < HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21) Console.WriteLine("Ты проиграл.");
 if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21 && HowMuchAll(PlayerCard) < 21 ) Console.WriteLine("Ты выйграл!!!!");
 if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
