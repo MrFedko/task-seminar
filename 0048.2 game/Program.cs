@@ -141,6 +141,23 @@ int[] LastCall(int[] player, int[] dealer)        // набор карт дил�
     return dealer;
 }
 
+void score()       //подсчет и выведение результата
+{
+    if (HowMuchAll(PlayerCard) == 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты прогирал....");
+    if (HowMuchAll(PlayerCard) < HowMuchAll(DealerCard) && HowMuchAll(DealerCard) <= 21) Console.WriteLine("Ты проиграл.");
+    if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты выйграл!!!!");
+    if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
+    if (HowMuchAll(PlayerCard) > 21) Console.WriteLine("Перебор....");
+    if (HowMuchAll(PlayerCard) == 21) 
+    {
+        DealerCard = LastCall(PlayerCard, DealerCard);
+        Table();
+        if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) || HowMuchAll(DealerCard) > 21) Console.WriteLine("Black Jack!!!");
+        if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
+    }
+
+    if (HowMuchAll(DealerCard) > 21) Console.WriteLine("Ты  выйграл!!!");
+}
 
 FirstDistribution(PlayerCard, DealerCard);
 FirstDealer(PlayerCard, DealerCard);
@@ -150,7 +167,7 @@ while (HowMuchAll(PlayerCard) < 21)
 {
     Console.WriteLine("Ещё карту? Y / N ");
     char answer = Convert.ToChar(Console.ReadLine());
-    if (answer == 'y')
+    if (answer == 'y' || answer == 'Y')
     {
         PlayerCard = NextMove(PlayerCard, DealerCard);
         Table();
@@ -162,16 +179,18 @@ while (HowMuchAll(PlayerCard) < 21)
         break;
     }
 }
-if (HowMuchAll(DealerCard) > 21) Console.WriteLine("Ты  выйграл!!!");
-if (HowMuchAll(PlayerCard) == 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты прогирал....");
-if (HowMuchAll(PlayerCard) < HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21) Console.WriteLine("Ты проиграл.");
-if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21 && HowMuchAll(PlayerCard) < 21 ) Console.WriteLine("Ты выйграл!!!!");
-if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
-if (HowMuchAll(PlayerCard) > 21) Console.WriteLine("Перебор....");
-if (HowMuchAll(PlayerCard) == 21)
-{
-    DealerCard = LastCall(PlayerCard, DealerCard);
-    Table();
-    if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard)) Console.WriteLine("Black Jack!!!");
 
-}
+score();
+// if (HowMuchAll(DealerCard) > 21) Console.WriteLine("Ты  выйграл!!!");
+// if (HowMuchAll(PlayerCard) == 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты прогирал....");
+// if (HowMuchAll(PlayerCard) < HowMuchAll(DealerCard) && HowMuchAll(DealerCard) <= 21) Console.WriteLine("Ты проиграл.");
+// if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты выйграл!!!!");
+// if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
+// if (HowMuchAll(PlayerCard) > 21) Console.WriteLine("Перебор....");
+// if (HowMuchAll(PlayerCard) == 21)
+// {
+//     DealerCard = LastCall(PlayerCard, DealerCard);
+//     Table();
+//     if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) || HowMuchAll(DealerCard) > 21) Console.WriteLine("Black Jack!!!");
+
+// }
