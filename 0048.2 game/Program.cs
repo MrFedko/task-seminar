@@ -65,14 +65,14 @@ int HowMuchAll(int[] array)        //подсчет карт на руках
     }
     for (int j = 0; j < array.Length; j++)
     {
-        if ((sum + 10) < 21 && HowMuch(array[j]) == 1) return sum += 10;
+        if ((sum + 10) <= 21 && HowMuch(array[j]) == 1) return sum += 10;
     }
     return sum;
 }
 
 int NextCard()      //рандомно выбираем карту
 {
-    return new Random().Next(0, 53);
+    return new Random().Next(0, 52);
 }
 
 void Table()     //вывод суммы и карт на экран
@@ -96,12 +96,11 @@ void Table()     //вывод суммы и карт на экран
 int[] FirstDistribution(int[] player, int[] dealer)     //первая раздача игроку
 {
     for (int i = 0; i < player.Length; i++)
-        for (int j = 0; j < dealer.Length; j++)
-            for (int k = 1; k < player.Length; k++)
-            {
-                player[i] = NextCard();
-                if (player[k] == player[i] || player[k] == dealer[j]) player[i] = NextCard();
-            }
+        for (int k = 1; k < player.Length; k++)
+        {
+            player[i] = NextCard();
+            if (player[k] == player[i]) player[i] = NextCard();
+        }
     return player;
 }
 
@@ -123,11 +122,11 @@ int[] NextMove(int[] one, int[] two)        // ход
     {
         array[i] = one[i];
     }
-    array[one.Length] = NextCard();
+    array[array.Length - 1] = NextCard();
     for (int i = 0; i < array.Length - 1; i++)
         for (int j = 0; j < two.Length; j++)
         {
-            if (array[one.Length] == two[j] || array[one.Length] == one[i]) array[one.Length] = NextCard();
+            while (array[array.Length-1] == two[j] || array[array.Length-1] == array[i]) array[one.Length] = NextCard();
         }
     return array;
 }
@@ -148,7 +147,7 @@ void score()       //подсчет и выведение результата
     if (HowMuchAll(PlayerCard) > HowMuchAll(DealerCard) && HowMuchAll(DealerCard) < 21 && HowMuchAll(PlayerCard) < 21) Console.WriteLine("Ты выйграл!!!!");
     if (HowMuchAll(PlayerCard) == HowMuchAll(DealerCard)) Console.WriteLine("Ничья");
     if (HowMuchAll(PlayerCard) > 21) Console.WriteLine("Перебор....");
-    if (HowMuchAll(PlayerCard) == 21) 
+    if (HowMuchAll(PlayerCard) == 21)
     {
         DealerCard = LastCall(PlayerCard, DealerCard);
         Table();
