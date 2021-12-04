@@ -6,12 +6,14 @@ int number = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число M: ");
 int number1 = Convert.ToInt16(Console.ReadLine());
 
-int ShowNumber(int n1, int n)
+string ShowNumber(int m, int n)
 {
-    Console.WriteLine($"{n1}");
-    if (n1 == n) return n;
-    if (n1 > n) return ShowNumber(n1 - 1, n);
-    else return ShowNumber(n1 + 1, n);
+    if (m == n) return $"{n}";
+    else
+    {
+        if (m > n) return $"{m} {ShowNumber((m - 1), n)}";
+        else return $"{m} {ShowNumber((m + 1), n)}";
+    }
 }
 
-ShowNumber(number1, number);
+Console.WriteLine(ShowNumber(number1, number));
