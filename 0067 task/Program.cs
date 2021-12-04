@@ -3,11 +3,10 @@
 Console.WriteLine("Введите число N: ");
 int number = Convert.ToInt16(Console.ReadLine());
 
-int ShowNumber(int n1, int n)
+string ShowNumber(int n)
 {
-    Console.WriteLine($"{n1}");
-    if (n1 == n) return n;
-    return ShowNumber(n1 - 1, n);
+    if (n == 1) return "1";
+    else return $"{n} {ShowNumber(n - 1)}";
 }
 
-ShowNumber(number, 1);
+Console.WriteLine(ShowNumber(number));
