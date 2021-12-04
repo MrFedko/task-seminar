@@ -1,8 +1,8 @@
 ﻿// Задать двумерный массив следующим правилом: Aₘₙ = m+n
 
-Console.WriteLine("Введите число столбцов: ");
-int num1 = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число строк: ");
+int num1 = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Введите число столбцов: ");
 int num2 = Convert.ToInt16(Console.ReadLine());
 
 int[,] NewArray(int a, int b)
