@@ -6,13 +6,14 @@ int number = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Введите число M: ");
 int number1 = Convert.ToInt16(Console.ReadLine());
 
-int ShowNumber(int m, int n, int sum)
+int SummNumber(int m, int n)
 {
-    sum += m;
-    if (m == n) return sum;
-    if (m > n) return ShowNumber(m - 1, n, sum);
-    else return ShowNumber(m + 1, n, sum);
+    if (m == n) return n;
+    else
+    {
+        if (m > n) return m + SummNumber((m - 1), n);
+        else return m + SummNumber((m + 1), n);
+    }
 }
 
-int summOfAll = 0;
-Console.WriteLine(ShowNumber(number1, number, summOfAll));
+Console.WriteLine(SummNumber(number1, number));
