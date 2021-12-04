@@ -1,13 +1,11 @@
 ﻿// Найти сумму цифр числа
 Console.WriteLine("Введите число N: ");
 int number = Convert.ToInt16(Console.ReadLine());
-int tempor = 0;
 
-int Summ(int num, int div, int temp)
+int Summ(int num, int div)
 {
-    if (num / div == 0) return temp;
-    temp += (num / div) % 10;
-    return Summ(num, div * 10, temp);
+    if (num / div == 0) return 0;
+    else return ((num / div) % 10) + Summ(num, div * 10);
 }
 
-Console.WriteLine(Summ(number, 1, tempor));
+Console.WriteLine(Summ(number, 1));
