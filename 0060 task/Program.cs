@@ -2,7 +2,7 @@
 
 string little = "Так как я никогда в жизни не рисовал баранов"
                 + " я я я я я повторил для него одну из двух старых картинок"
-                + " которые я               только и умею рисовать удава снаружи";
+                + " которые я               только и умею рисовать удава снаружи".ToLower();
 
 var littleArray = little.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
