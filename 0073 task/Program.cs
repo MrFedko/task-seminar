@@ -14,8 +14,7 @@ int count = Request("Введите количество чисел в посл�
 
 string Sequence(int a, int b, int c)
 {
-    if(c == 0) return $"{a}";
-    else return $"{a} {Sequence(b, a+b, c-1)}";
+    return c == 0 ? $"{a}" : $"{a} {Sequence(b, a+b, c-1)}";
 }
 
 Console.WriteLine(Sequence(numberA, numberB, count-1));
