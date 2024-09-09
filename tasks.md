@@ -24,8 +24,6 @@
 - Work schedule: Full day  
 - Commute preference: No preference
 
-**Expected salary:** 100,000 ₽
-
 ---
 
 ### **Work Experience**  
